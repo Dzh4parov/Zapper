@@ -1,0 +1,543 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: inter;
+}
+body {
+  background: #e5e5e5;
+}
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-template-rows: 10vh 1fr;
+}
+.header,
+.main,
+.aside,
+.main > div {
+  /* border: 1px solid black; */
+  padding: 10px;
+}
+.header {
+  grid-column: 1/4;
+  box-shadow: 0px 3px 8px rgba(44, 61, 90, 0.12);
+  z-index: 1;
+  justify-content: space-between;
+}
+.header > div,
+.header > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.h-left {
+  width: 45%;
+}
+.h-left img {
+  margin-right: 10px;
+}
+.h-right {
+  width: 20%;
+}
+.h-right select {
+  border: none;
+  outline: none;
+  margin-left: 10px;
+}
+.h-input {
+  width: 340px;
+  height: 40px;
+  background: #f1f6fe;
+  border-radius: 8px;
+}
+.h-input input {
+  background: #f1f6fe;
+  border: none;
+  padding-left: 20px;
+}
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 10vh 187px 344px 210px;
+  grid-template-areas:
+    "o o o o o o o o o o o o"
+    "n n n n n n i i i e e e"
+    "p p p p p p p p a a a a"
+    "t t t t t t t t a a a a";
+  gap: 20px;
+}
+.main > div {
+  border-radius: 8px;
+}
+.header,
+.aside,
+.main > div {
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+/* aside css */
+
+.aside {
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 36px 0 42px;
+}
+.aside > div {
+  width: 232px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.aside a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2c384f;
+  display: flex;
+  align-items: center;
+}
+.aside img {
+  margin: 0 25px;
+}
+.aside__links button:first-child {
+  width: 232px;
+  height: 70px;
+  background: #784ffe;
+  border-radius: 8px;
+  border: none;
+  justify-content: space-around;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+}
+.aside button,
+.aside a {
+  margin-bottom: 29px;
+}
+.aside__links button:nth-child(2) {
+  width: 232px;
+  height: 54px;
+  background: rgba(120, 79, 254, 0.12);
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #784ffe;
+}
+
+/* overview css */
+
+.overview {
+  grid-area: o;
+  background: none !important;
+  display: flex;
+  justify-content: space-between;
+}
+.overview h1 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #2c384f;
+}
+.overview a {
+  width: 128px;
+  height: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+  background: #724bf2;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* net-worth css */
+
+.net-worth {
+  grid-area: n;
+  justify-content: space-between;
+}
+.net-worth > img {
+  width: 45%;
+  margin-top: 50px;
+}
+.net-worth h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #899bbe;
+}
+.price {
+  margin: 6px 0 22px 0;
+}
+.price > span {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  color: #2c384f;
+  margin-right: 5px;
+}
+.price > div > span {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #20bf6b;
+}
+.btn button {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.btn button:first-child {
+  width: 94px;
+  height: 38px;
+  background: #724bf2;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+  margin-right: 8px;
+}
+.btn button:last-child {
+  width: 94px;
+  height: 38px;
+  background: #ece6ff;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #2c384f;
+}
+
+/* !income css */
+
+.income {
+  grid-area: i;
+  justify-content: space-between;
+  position: relative;
+}
+.income > img {
+  width: 55%;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.income h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #899bbe;
+  margin-bottom: 9px;
+}
+
+.income > div > span {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  color: #2c384f;
+}
+.doll {
+  margin-top: 16px;
+}
+.doll span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #20bf6b;
+}
+
+/* Expenses css */
+
+.expenses {
+  grid-area: e;
+  justify-content: space-between;
+}
+
+.expenses > img {
+  width: 55%;
+  margin-bottom: -85px;
+}
+.expenses h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #899bbe;
+  margin-bottom: 6px;
+}
+.expenses > div > span {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  color: #2c384f;
+}
+.red-arrow {
+  margin-top: 15px;
+}
+.red-arrow span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #eb3b5a;
+}
+
+/* Portofolio CSS */
+
+.portofolio {
+  grid-area: p;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.performance {
+  width: 85%;
+  justify-content: space-between;
+}
+.performance h1 > img {
+  background: #724bf2;
+  border-radius: 6px;
+  padding: 11px;
+  margin-right: 18px;
+}
+.performance h1 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #2c384f;
+}
+.performance button {
+  background: #efebff;
+  border-radius: 12px;
+  padding: 10px 16px;
+  border: none;
+}
+.performance button > img {
+  margin-left: 8px;
+}
+.ratings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.d-rating {
+  display: flex;
+  flex-direction: column;
+  margin-left: 58px;
+}
+.d-rating span {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #899bbe;
+  margin: 12px 0;
+}
+.graphics {
+  margin: 22px 35px 0 0;
+  border-top: 1px dashed rgba(44, 56, 79, 0.3);
+  border-image-repeat: repeat;
+  position: relative;
+}
+.graphics hr{
+  position: absolute;
+  border: dashed 1px rgba(44, 56, 79, 0.3);
+  width: 561px;
+  z-index: 0;
+}
+.graphics hr:first-child{
+  position: absolute;
+  top: 44px;
+  border: 0.1px dashed #724bf2 !important;
+  
+}
+.graphics hr:nth-child(2){
+  position: absolute;
+  top: 87px;
+}
+.graphics hr:nth-child(3){
+  position: absolute;
+  top: 131px;
+}
+.graphics hr:nth-child(4){
+  position: absolute;
+  bottom: 38px;
+}
+.graphics button {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #2c384f;
+  display: flex;
+  align-items: center;
+  margin: 0 0 20px 95px;
+  border: none;
+  background: #e7e7e7;
+  border-radius: 2px;
+  padding: 5px 10px;
+  outline: none;
+}
+.graphics button > img {
+  margin-right: 6px;
+}
+.graphics > div {
+  display: flex;
+}
+.graphics > div p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #899bbe;
+  margin: 16px 25px 0px 4px;
+}
+.graphics > div p:nth-child(3) {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #2c384f;
+}
+
+/* All-assets CSS */
+
+.all-assets {
+  grid-area: a;
+}
+/* .all-assets > div {
+  margin: 15px 0 0 16px;
+} */
+.all-assets > div > div {
+  margin: 17px;
+}
+.all-assets h2 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #2c384f;
+  margin-left: 17px;
+}
+.all-assets button {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #ffffff;
+  padding: 13px 125px;
+  background: #724bf2;
+  border-radius: 12px;
+  margin: 12px 0 0 5px;
+  border: none;
+  outline: none;
+}
+.ethe h4,
+.bitcoin h4,
+.dogecoin h4,
+.litecoin h4,
+.dogey h4,
+.eksimo h4 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2c384f;
+}
+.ethe > div > div > span,
+.bitcoin > div > div > span,
+.dogecoin > div > div > span,
+.litecoin > div > div > span,
+.dogey > div > div > span,
+.eksimo > div > div > span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #899bbe;
+  margin-right: 55px;
+}
+.ethe p,
+.bitcoin p,
+.dogecoin p,
+.litecoin p,
+.dogey p,
+.eksimo p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+}
+.pa {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+  color: #20bf6b;
+}
+.ra {
+  color: #eb3b5a;
+}
+
+/* Transactions CSS */
+
+.transactions {
+  grid-area: t;
+}
+.trans {
+  width: 85%;
+  justify-content: space-between;
+  margin-left: 55px;
+}
+.trans h1 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #2c384f;
+}
+.trans h1 > img {
+  background: #724bf2;
+  border-radius: 6px;
+  padding: 11px;
+  margin-right: 18px;
+}
+.trans button {
+  background: #efebff;
+  border-radius: 12px;
+  padding: 10px 20px;
+  border: none;
+}
+.trans button > img {
+  margin-left: 8px;
+}
+.willian,
+.samuel {
+  width: 95%;
+  justify-content: space-evenly;
+  margin: 29px 0 15px 18px;
+}
+.willian h5,
+.samuel h5 {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #2c384f;
+}
+.willian p,
+.samuel p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #2c384f;
+}
+.sir {
+  color: #724bf2 !important;
+  background: rgba(99, 52, 254, 0.12);
+  border-radius: 6px;
+  padding: 8px 17px;
+}
